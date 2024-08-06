@@ -17,8 +17,15 @@ const App = {
 		},
 		// добавление заметки
 		addNewNote() {
-			this.notes.push(this.inputValue)
-			this.inputValue = ''
+			//проверка наличия пустой строки при помощи if
+			if (this.inputValue != '') {
+				this.notes.push(this.inputValue)
+				this.inputValue = ''
+			}
+		},
+		//вывод заметки с заглавной буквы
+		toUpperCase(item) {
+			return item.toUpperCase();
 		},
 		// удаление заметки
 		removeNote(idx) {
